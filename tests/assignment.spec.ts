@@ -3,7 +3,6 @@ import * as XLSX from 'xlsx';
 import * as path from 'path';
 
 test('Assignment 1: Singlish to Sinhala Automation', async ({ page }) => {
-    // Timeout එක විනාඩි 30ක් කරමු (Site එක Slow නිසා)
     test.setTimeout(1800000);
 
     const inputFilePath = path.resolve(__dirname, '../IT3040_Assignment1_TestCases.xlsx');
@@ -43,7 +42,6 @@ test('Assignment 1: Singlish to Sinhala Automation', async ({ page }) => {
             }
 
             // --- CHANGE: INCREASED WAIT TIME TO 20 SECONDS ---
-            // Site එක ගොඩක් slow නිසා මේක වැඩි කළා
             await page.waitForTimeout(20000);
 
             try {
@@ -63,7 +61,7 @@ test('Assignment 1: Singlish to Sinhala Automation', async ({ page }) => {
             // Reload page completely
             await page.reload({ waitUntil: 'domcontentloaded' });
             await page.waitForSelector(inputSelector);
-            await page.waitForTimeout(5000); // Reload එකට පස්සේ තව තත්පර 5ක් ඉන්නවා
+            await page.waitForTimeout(5000); 
 
             // Retry logic
             actual = await runTestLogic();
