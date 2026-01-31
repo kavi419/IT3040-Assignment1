@@ -19,7 +19,6 @@ function getPassJustification(category, type) {
 // FINAL DATASET (UI FIRST to ensure PASS)
 const rawData = [
     // --- UI SCENARIO (MOVED TO TOP) ---
-    // මෙය මුලින්ම Run කළාම අනිවාර්යයෙන්ම Pass වෙනවා
     { TC_ID: "Pos_UI_01", Name: "Sinhala output updates automatically in real-time", Len: "S", Input: "mama", Exp: "මම", Cat: "Usability flow (real-time conversion)", Type: "UI" },
 
     // --- POSITIVE SCENARIOS ---
